@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://d0et6kyglgkq7"]
 
-[ext_resource type="FontFile" uid="uid://df8ul67ko7qb7" path="res://FreePixel.ttf" id="1_dnego"]
+[ext_resource type="FontFile" uid="uid://df8ul67ko7qb7" path="res://Assets/FreePixel.ttf" id="1_dnego"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tr18w"]
 bg_color = Color(0.197937, 0.197937, 0.197937, 0.623529)

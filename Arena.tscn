@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cb0bhjaasrc27" path="res://player.tscn" id="1_iwmf7"]
 [ext_resource type="Texture2D" uid="uid://ygntetsypm1a" path="res://Assets/Background/Space.png" id="1_vyouq"]
 [ext_resource type="Texture2D" uid="uid://b0qsg8eh756sa" path="res://Assets/Background/Stars.png" id="2_6fs0g"]
-[ext_resource type="FontFile" uid="uid://df8ul67ko7qb7" path="res://FreePixel.ttf" id="3_72ej4"]
+[ext_resource type="FontFile" uid="uid://df8ul67ko7qb7" path="res://Assets/FreePixel.ttf" id="3_72ej4"]
 [ext_resource type="PackedScene" uid="uid://bu2culufb56sx" path="res://Enemy.tscn" id="4_02omo"]
 [ext_resource type="PackedScene" uid="uid://7s8g5lv0yf5k" path="res://ammo.tscn" id="5_2kbxn"]
 [ext_resource type="Texture2D" uid="uid://htpbrxi2yaho" path="res://Assets/Planets/Purple.png" id="5_nmfx6"]
