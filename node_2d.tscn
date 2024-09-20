@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://codnrt1tddr12"]
 
-[ext_resource type="Texture2D" uid="uid://dqx3oisl18f4b" path="res://Dirt.png" id="1_qrusu"]
+[ext_resource type="Texture2D" uid="uid://dqx3oisl18f4b" path="res://Assets/Dirt.png" id="1_qrusu"]
 [ext_resource type="Script" path="res://tile_map.gd" id="1_ufgba"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8t67s"]

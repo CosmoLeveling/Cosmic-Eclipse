@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv11peg0ckds8"
-path="res://.godot/imported/hit_particle.png-114cbde027a1b74b01da81691ca733df.ctex"
+uid="uid://dqx3oisl18f4b"
+path="res://.godot/imported/Dirt.png-721ad11ec98cf4a5c6757db62f98e5cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://hit_particle.png"
-dest_files=["res://.godot/imported/hit_particle.png-114cbde027a1b74b01da81691ca733df.ctex"]
+source_file="res://Assets/Dirt.png"
+dest_files=["res://.godot/imported/Dirt.png-721ad11ec98cf4a5c6757db62f98e5cf.ctex"]
 
 [params]
 
