@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhe3u6eg8dvt4"]
+
+[ext_resource type="Script" path="res://start_screen.gd" id="1_sofvx"]
+[ext_resource type="Texture2D" uid="uid://ygntetsypm1a" path="res://Assets/Background/Space.png" id="2_lxp5v"]
+[ext_resource type="Texture2D" uid="uid://b0qsg8eh756sa" path="res://Assets/Background/Stars.png" id="3_pv2ad"]
+[ext_resource type="FontFile" uid="uid://df8ul67ko7qb7" path="res://FreePixel.ttf" id="4_h8qqa"]
+
+[node name="StartScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sofvx")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 504.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_lxp5v")
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 504.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_pv2ad")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -325.0
+offset_top = -274.0
+offset_right = 325.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_h8qqa")
+theme_override_font_sizes/font_size = 50
+text = "Start Game"
+
+[node name="Options" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_h8qqa")
+theme_override_font_sizes/font_size = 50
+text = "Options
+"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_h8qqa")
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -325.0
+offset_right = 325.0
+offset_bottom = 269.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_h8qqa")
+theme_override_font_sizes/font_size = 100
+text = "Cosmic Eclipse"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

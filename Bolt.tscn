@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://f5xpw2qdq631"]
+
+[ext_resource type="Script" path="res://bolt.gd" id="1_dhsko"]
+[ext_resource type="Texture2D" uid="uid://cwf2pfntgxclr" path="res://bolt.png" id="2_bm13o"]
+[ext_resource type="PackedScene" uid="uid://dgxbsoam0perc" path="res://_hit_particle.tscn" id="2_gw6ko"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wulut"]
+radius = 5.0
+
+[node name="Bolt" type="Node2D"]
+script = ExtResource("1_dhsko")
+hit_particle = ExtResource("2_gw6ko")
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+shape = SubResource("CircleShape2D_wulut")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, -1.50644e-07)
+rotation = 0.785397
+scale = Vector2(0.693061, 0.693061)
+texture = ExtResource("2_bm13o")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://dgxbsoam0perc"]
+
+[ext_resource type="Texture2D" uid="uid://cv11peg0ckds8" path="res://hit_particle.png" id="1_rwgis"]
+[ext_resource type="Script" path="res://_hit_particle.gd" id="2_42ca6"]
+[ext_resource type="AudioStream" uid="uid://b6hjqx2axpmct" path="res://mixkit-short-explosion-1694.wav" id="3_vddg8"]
+
+[sub_resource type="Curve" id="Curve_h67dp"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_2y0fa"]
+curve = SubResource("Curve_h67dp")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_burym"]
+lifetime_randomness = 0.5
+particle_flag_disable_z = true
+spread = 180.0
+initial_velocity_min = 10.0
+initial_velocity_max = 15.0
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_2y0fa")
+
+[node name="GPUParticles2D" type="GPUParticles2D"]
+emitting = false
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_burym")
+texture = ExtResource("1_rwgis")
+one_shot = true
+explosiveness = 1.0
+script = ExtResource("2_42ca6")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_vddg8")
+autoplay = true

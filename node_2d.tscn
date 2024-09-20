@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://codnrt1tddr12"]
+
+[ext_resource type="Texture2D" uid="uid://dqx3oisl18f4b" path="res://Dirt.png" id="1_qrusu"]
+[ext_resource type="Script" path="res://tile_map.gd" id="1_ufgba"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8t67s"]
+texture = ExtResource("1_qrusu")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_d220y"]
+sources/0 = SubResource("TileSetAtlasSource_8t67s")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_d220y")
+script = ExtResource("1_ufgba")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)

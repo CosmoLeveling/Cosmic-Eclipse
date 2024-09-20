@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://bu2culufb56sx"]
+
+[ext_resource type="Script" path="res://enemy.gd" id="1_2dist"]
+[ext_resource type="PackedScene" uid="uid://cu6kk6tict8jn" path="res://health_component.tscn" id="1_jdkgt"]
+[ext_resource type="PackedScene" uid="uid://disbmfv60u5ap" path="res://hitbox_component.tscn" id="2_0iqg0"]
+[ext_resource type="Texture2D" uid="uid://dg7r24n8s3xyc" path="res://enemy.png" id="4_6dlgs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v7rlx"]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gqede"]
+radius = 9.0
+
+[node name="Enemy" type="CharacterBody2D"]
+collision_mask = 3
+motion_mode = 1
+script = ExtResource("1_2dist")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_v7rlx")
+
+[node name="HealthComponent" parent="." instance=ExtResource("1_jdkgt")]
+
+[node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("2_0iqg0")]
+health_component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+shape = SubResource("CircleShape2D_v7rlx")
+
+[node name="Attacker" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Attacker"]
+shape = SubResource("CircleShape2D_gqede")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("4_6dlgs")
+
+[connection signal="area_entered" from="Attacker" to="." method="_on_attacker_area_entered"]
+[connection signal="area_exited" from="Attacker" to="." method="_on_attacker_area_exited"]
