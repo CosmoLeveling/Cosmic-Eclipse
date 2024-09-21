@@ -7,7 +7,6 @@ func _on_timer_timeout() -> void:
 	var enemy_to_spawn = enemy.instantiate()
 	var x_point = randi_range(0,radius)
 	
-	print(Vector2(player.position.x + x_point,player.position.y + (radius-x_point)))
 	enemy_to_spawn.position.x = player.position.x + x_point
 	enemy_to_spawn.position.y = player.position.y + (radius-x_point)
 	enemy_to_spawn.player = player

@@ -1,3 +1,4 @@
+class_name player
 extends CharacterBody2D
 
 @onready var bolt = preload("res://Bolt.tscn")
@@ -5,14 +6,28 @@ extends CharacterBody2D
 @onready var health_bar: ProgressBar = $"../CanvasLayer/Gui/ProgressBar"
 const SPEED = 133.0
 const JUMP_VELOCITY = -400.0
-var current_ammo = 10
-var max_ammo = 10
+var current_energy = 10
+var max_energy = 10
 var cooldown_ability_1 = 0
+var cores = []
 @onready var health_component: HealthComponent = $HealthComponent
 
+func _ready() -> void:
+	_update_max_energy()
+	current_energy = max_energy
+
+func _update_max_energy():
+	for ch in get_children():
+		if ch is Core:
+			cores.append(ch.energy_max_increase)
+	max_energy = 10
+	for c in cores:
+		max_energy += c
+
 func _process(delta: float) -> void:
+	
 	health_bar.max_value = health_component.max_health
-	ammo.text = str(current_ammo) + "/" + str(max_ammo)
+	ammo.text = str(current_energy) + "/" + str(max_energy)
 	health_bar.value = health_component.health
 
 func _physics_process(delta: float) -> void:
@@ -26,10 +41,10 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _ammo_pickup(num):
-	current_ammo += num
-	current_ammo = clamp(current_ammo,0,max_ammo)
+	current_energy += num
+	current_energy = clamp(current_energy,0,max_energy)
 func _kill():
 	position = Vector2(0,0)
 	health_component.health = health_component.max_health
-	current_ammo = max_ammo
+	current_energy = max_energy
 	

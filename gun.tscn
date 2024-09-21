@@ -10,7 +10,7 @@ script = ExtResource("1_x3uup")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 rotation = 1.5708
-polygon = PackedVector2Array(7, 7, -7, 7, 0, -4)
+polygon = PackedVector2Array(7.00003, 7.99997, -6.99997, 8.00003, 0, -4)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = 1.5708

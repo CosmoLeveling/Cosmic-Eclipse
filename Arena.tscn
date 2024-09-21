@@ -57,7 +57,7 @@ motion_mirroring = Vector2(500, 500)
 position = Vector2(25, -8)
 texture = ExtResource("7_u4lul")
 hframes = 50
-frame = 4
+frame = 45
 script = ExtResource("8_asmdm")
 anim_speed = 0.05
 
@@ -65,7 +65,7 @@ anim_speed = 0.05
 position = Vector2(260, 419)
 texture = ExtResource("5_nmfx6")
 hframes = 50
-frame = 4
+frame = 45
 script = ExtResource("8_asmdm")
 anim_speed = 0.05
 
@@ -73,7 +73,7 @@ anim_speed = 0.05
 position = Vector2(127, 116)
 texture = ExtResource("6_g7i3h")
 hframes = 50
-frame = 4
+frame = 45
 script = ExtResource("8_asmdm")
 anim_speed = 0.05
 
@@ -81,7 +81,7 @@ anim_speed = 0.05
 position = Vector2(72, 333)
 texture = ExtResource("7_6hnho")
 hframes = 50
-frame = 4
+frame = 45
 script = ExtResource("8_asmdm")
 anim_speed = 0.05
 
@@ -89,7 +89,7 @@ anim_speed = 0.05
 position = Vector2(353, 319)
 texture = ExtResource("8_urrve")
 hframes = 50
-frame = 4
+frame = 45
 script = ExtResource("8_asmdm")
 anim_speed = 0.05
 
@@ -97,7 +97,7 @@ anim_speed = 0.05
 position = Vector2(320, 182)
 texture = ExtResource("9_diyct")
 hframes = 50
-frame = 4
+frame = 45
 script = ExtResource("8_asmdm")
 anim_speed = 0.05
 
