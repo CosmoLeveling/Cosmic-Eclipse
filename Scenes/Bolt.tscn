@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://f5xpw2qdq631"]
 
-[ext_resource type="Script" path="res://bolt.gd" id="1_dhsko"]
+[ext_resource type="Script" path="res://Scripts/bolt.gd" id="1_dhsko"]
 [ext_resource type="Texture2D" uid="uid://cwf2pfntgxclr" path="res://Assets/bolt.png" id="2_bm13o"]
-[ext_resource type="PackedScene" uid="uid://dgxbsoam0perc" path="res://_hit_particle.tscn" id="2_gw6ko"]
+[ext_resource type="PackedScene" uid="uid://dgxbsoam0perc" path="res://Scenes/_hit_particle.tscn" id="2_gw6ko"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wulut"]
 radius = 5.0

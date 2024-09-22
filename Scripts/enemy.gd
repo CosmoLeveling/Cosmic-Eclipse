@@ -1,6 +1,6 @@
 class_name enemy
 extends CharacterBody2D
-@onready var Ammo_scene = preload("res://ammo.tscn")
+@onready var Ammo_scene = preload("res://Scenes/ammo.tscn")
 @export var player:CharacterBody2D
 var cooldown = 0
 var attacking = null

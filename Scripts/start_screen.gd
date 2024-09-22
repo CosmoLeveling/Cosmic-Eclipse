@@ -1,6 +1,6 @@
 extends Control
-@onready var game_scene = preload("res://Arena.tscn")
-@onready var options_scene = preload("res://options.tscn")
+@onready var game_scene = preload("res://Scenes/Arena.tscn")
+@onready var options_scene = preload("res://Scenes/options.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -20,4 +20,4 @@ func _on_quit_pressed() -> void:
 
 
 func _on_options_pressed() -> void:
-	get_tree().change_scene_to_packed(options_scene)
+	Guis.find_child("Options_scene").visible = true

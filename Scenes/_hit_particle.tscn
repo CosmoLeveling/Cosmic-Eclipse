@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://dgxbsoam0perc"]
 
 [ext_resource type="Texture2D" uid="uid://cv11peg0ckds8" path="res://Assets/hit_particle.png" id="1_rwgis"]
-[ext_resource type="Script" path="res://_hit_particle.gd" id="2_42ca6"]
-[ext_resource type="AudioStream" uid="uid://b6hjqx2axpmct" path="res://mixkit-short-explosion-1694.wav" id="3_vddg8"]
+[ext_resource type="Script" path="res://Scripts/_hit_particle.gd" id="2_42ca6"]
+[ext_resource type="AudioStream" uid="uid://b6hjqx2axpmct" path="res://Assets/mixkit-short-explosion-1694.wav" id="3_vddg8"]
 
 [sub_resource type="Curve" id="Curve_h67dp"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]

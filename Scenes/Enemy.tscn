@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://bu2culufb56sx"]
 
-[ext_resource type="Script" path="res://enemy.gd" id="1_2dist"]
-[ext_resource type="PackedScene" uid="uid://cu6kk6tict8jn" path="res://health_component.tscn" id="1_jdkgt"]
-[ext_resource type="PackedScene" uid="uid://disbmfv60u5ap" path="res://hitbox_component.tscn" id="2_0iqg0"]
+[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_2dist"]
+[ext_resource type="PackedScene" uid="uid://cu6kk6tict8jn" path="res://Scenes/health_component.tscn" id="1_jdkgt"]
+[ext_resource type="PackedScene" uid="uid://disbmfv60u5ap" path="res://Scenes/hitbox_component.tscn" id="2_0iqg0"]
 [ext_resource type="Texture2D" uid="uid://dg7r24n8s3xyc" path="res://Assets/enemy.png" id="4_6dlgs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v7rlx"]
@@ -28,6 +28,7 @@ health_component = NodePath("../HealthComponent")
 shape = SubResource("CircleShape2D_v7rlx")
 
 [node name="Attacker" type="Area2D" parent="."]
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Attacker"]
 shape = SubResource("CircleShape2D_gqede")

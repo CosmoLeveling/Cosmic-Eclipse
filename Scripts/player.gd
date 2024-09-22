@@ -1,7 +1,7 @@
 class_name player
 extends CharacterBody2D
 
-@onready var bolt = preload("res://Bolt.tscn")
+@onready var bolt = preload("res://Scenes/Bolt.tscn")
 @onready var ammo: Label = $"../CanvasLayer/Gui/HBoxContainer/Label2"
 @onready var health_bar: ProgressBar = $"../CanvasLayer/Gui/ProgressBar"
 const SPEED = 133.0
@@ -10,6 +10,7 @@ var current_energy = 10
 var max_energy = 10
 var cooldown_ability_1 = 0
 var cores = []
+var rotati: Vector2
 @onready var health_component: HealthComponent = $HealthComponent
 
 func _ready() -> void:
@@ -26,12 +27,11 @@ func _update_max_energy():
 
 func _process(delta: float) -> void:
 	
-	health_bar.max_value = health_component.max_health
-	ammo.text = str(current_energy) + "/" + str(max_energy)
-	health_bar.value = health_component.health
+	Guis.find_child("Gui").find_child("Health").max_value = health_component.max_health
+	Guis.find_child("Gui").find_child("Box").find_child("Energy").text = str(current_energy) + "/" + str(max_energy)
+	Guis.find_child("Gui").find_child("Health").value = health_component.health
 
 func _physics_process(delta: float) -> void:
-	
 	look_at(get_global_mouse_position())
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.

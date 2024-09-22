@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bxiyku5ylxfok"]
 
 [ext_resource type="Texture2D" uid="uid://dpmvj0k3ujxi8" path="res://Assets/Parts/Spike.png" id="1_xk1om"]
-[ext_resource type="Script" path="res://area_2d.gd" id="2_jgagb"]
+[ext_resource type="Script" path="res://Scripts/area_2d.gd" id="2_jgagb"]
 
 [node name="Spike" type="CharacterBody2D"]
 collision_layer = 2

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b6hjqx2axpmct"
-path="res://.godot/imported/mixkit-short-explosion-1694.wav-b8a88d3bf74d3eb44acf701e415889ff.sample"
+path="res://.godot/imported/mixkit-short-explosion-1694.wav-e4f86f9af1d06e1dc0e547dcd4e085da.sample"
 
 [deps]
 
-source_file="res://mixkit-short-explosion-1694.wav"
-dest_files=["res://.godot/imported/mixkit-short-explosion-1694.wav-b8a88d3bf74d3eb44acf701e415889ff.sample"]
+source_file="res://Assets/mixkit-short-explosion-1694.wav"
+dest_files=["res://.godot/imported/mixkit-short-explosion-1694.wav-e4f86f9af1d06e1dc0e547dcd4e085da.sample"]
 
 [params]
 

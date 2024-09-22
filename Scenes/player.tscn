@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://cb0bhjaasrc27"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_5i14y"]
-[ext_resource type="Script" path="res://hitbox_component.gd" id="2_vyfwx"]
-[ext_resource type="Script" path="res://HealthComponent.gd" id="3_gw1on"]
-[ext_resource type="PackedScene" uid="uid://bxiyku5ylxfok" path="res://Spike.tscn" id="5_a5204"]
-[ext_resource type="PackedScene" uid="uid://c3a301rfh3nhb" path="res://gun.tscn" id="6_ternx"]
-[ext_resource type="PackedScene" uid="uid://7w5wqrjvoan2" path="res://Core.tscn" id="7_2jgww"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_5i14y"]
+[ext_resource type="Script" path="res://Scripts/hitbox_component.gd" id="2_vyfwx"]
+[ext_resource type="Script" path="res://Scripts/HealthComponent.gd" id="3_gw1on"]
+[ext_resource type="PackedScene" uid="uid://bxiyku5ylxfok" path="res://Scenes/Spike.tscn" id="5_a5204"]
+[ext_resource type="PackedScene" uid="uid://c3a301rfh3nhb" path="res://Scenes/gun.tscn" id="6_ternx"]
+[ext_resource type="PackedScene" uid="uid://7w5wqrjvoan2" path="res://Scenes/Core.tscn" id="7_2jgww"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yt8jr"]
 size = Vector2(16, 16)
@@ -40,21 +40,9 @@ script = ExtResource("3_gw1on")
 position = Vector2(0, -32)
 rotation = 3.14157
 
-[node name="Spike5" parent="." instance=ExtResource("5_a5204")]
-position = Vector2(-16, 0)
-rotation = 7.85381
-
 [node name="Spike6" parent="." instance=ExtResource("5_a5204")]
 position = Vector2(0, 32)
 rotation = 6.28318
-
-[node name="Gun4" parent="." node_paths=PackedStringArray("Player") instance=ExtResource("6_ternx")]
-position = Vector2(16, -32)
-Player = NodePath("..")
-
-[node name="Gun5" parent="." node_paths=PackedStringArray("Player") instance=ExtResource("6_ternx")]
-position = Vector2(16, 32)
-Player = NodePath("..")
 
 [node name="Gun" parent="." node_paths=PackedStringArray("Player") instance=ExtResource("6_ternx")]
 position = Vector2(16, 0)
@@ -68,7 +56,26 @@ Player = NodePath("..")
 position = Vector2(16, -16)
 Player = NodePath("..")
 
-[node name="Core" parent="." instance=ExtResource("7_2jgww")]
+[node name="Gun4" parent="." node_paths=PackedStringArray("Player") instance=ExtResource("6_ternx")]
+position = Vector2(-32, 0)
+rotation = -3.14159
+Player = NodePath("..")
+
+[node name="Gun5" parent="." node_paths=PackedStringArray("Player") instance=ExtResource("6_ternx")]
+position = Vector2(-16, 16)
+rotation = -3.14159
+Player = NodePath("..")
+
+[node name="Gun6" parent="." node_paths=PackedStringArray("Player") instance=ExtResource("6_ternx")]
+position = Vector2(-16, -16)
+rotation = -3.14159
+Player = NodePath("..")
+
+[node name="Core4" parent="." instance=ExtResource("7_2jgww")]
+position = Vector2(-16, 0)
+energy_max_increase = 20
+
+[node name="Core7" parent="." instance=ExtResource("7_2jgww")]
 energy_max_increase = 20
 
 [node name="Core2" parent="." instance=ExtResource("7_2jgww")]
@@ -77,4 +84,4 @@ energy_max_increase = 20
 
 [node name="Core3" parent="." instance=ExtResource("7_2jgww")]
 position = Vector2(0, -16)
-energy_max_increase = 20
+energy_max_increase = 19

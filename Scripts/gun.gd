@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@onready var bolt = preload("res://Bolt.tscn")
+@onready var bolt = preload("res://Scenes/Bolt.tscn")
 var cooldown_ability_1 = 0
 @export var Player:player
 func _process(delta: float) -> void:
@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 
 func shoot():
 	Player.current_energy -= 1
-	cooldown_ability_1 = 100
+	cooldown_ability_1 = 75
 	var bullet = bolt.instantiate()
 	get_parent().get_parent().add_child(bullet)
 	bullet.rotation = global_rotation

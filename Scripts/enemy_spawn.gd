@@ -1,5 +1,5 @@
 extends Marker2D
-@onready var enemy = preload("res://Enemy.tscn")
+@onready var enemy = preload("res://Scenes/Enemy.tscn")
 @export var player: CharacterBody2D
 @export var radius = 100
 

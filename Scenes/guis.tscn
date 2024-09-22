@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2xnxs4heumim"]
+
+[ext_resource type="PackedScene" uid="uid://rshct33i4qvr" path="res://Scenes/pausescreen.tscn" id="1_8g4sb"]
+[ext_resource type="PackedScene" uid="uid://tfof2hvaj1b8" path="res://Scenes/options.tscn" id="2_1u5c4"]
+[ext_resource type="PackedScene" uid="uid://nti44h3iyvab" path="res://Scenes/keybinds.tscn" id="3_ltogj"]
+[ext_resource type="PackedScene" uid="uid://dsm8u1wqprfdf" path="res://gui.tscn" id="4_fx7r0"]
+
+[node name="Guis" type="CanvasLayer"]
+process_mode = 3
+
+[node name="Gui" parent="." instance=ExtResource("4_fx7r0")]
+visible = false
+
+[node name="pausescreen" parent="." instance=ExtResource("1_8g4sb")]
+visible = false
+
+[node name="Options_scene" parent="." instance=ExtResource("2_1u5c4")]
+visible = false
+
+[node name="Keybinds" parent="." instance=ExtResource("3_ltogj")]
+visible = false

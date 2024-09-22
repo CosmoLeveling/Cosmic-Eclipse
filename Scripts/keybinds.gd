@@ -1,8 +1,9 @@
 extends Control
 
-@onready var input_button_scene = preload("res://input_button.tscn")
+@onready var input_button_scene = preload("res://Scenes/input_button.tscn")
 @onready var action_list = $PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/ActionList
 
+var paused: bool
 var is_remapping = false
 var action_to_remap
 var remapping_button
@@ -60,4 +61,9 @@ func _update_action_list(button, event):
 
 
 func _on_back_pressed() -> void:
-	get_tree().change_scene_to_file("res://options.tscn")
+	Guis.find_child("Options_scene").visible = true
+	visible = false
+
+
+func _on_button_pressed() -> void:
+	_create_action_list()
