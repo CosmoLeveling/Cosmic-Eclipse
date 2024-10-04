@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://rshct33i4qvr" path="res://Scenes/pausescreen.tscn" id="1_8g4sb"]
 [ext_resource type="PackedScene" uid="uid://tfof2hvaj1b8" path="res://Scenes/options.tscn" id="2_1u5c4"]
 [ext_resource type="PackedScene" uid="uid://nti44h3iyvab" path="res://Scenes/keybinds.tscn" id="3_ltogj"]
-[ext_resource type="PackedScene" uid="uid://dsm8u1wqprfdf" path="res://gui.tscn" id="4_fx7r0"]
+[ext_resource type="PackedScene" uid="uid://dsm8u1wqprfdf" path="res://Scenes/gui.tscn" id="4_fx7r0"]
 
 [node name="Guis" type="CanvasLayer"]
 process_mode = 3

@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3a301rfh3nhb"]
+
+[ext_resource type="Script" path="res://Scripts/gun.gd" id="1_x3uup"]
+[ext_resource type="Texture2D" uid="uid://1qcjr2c1fmgy" path="res://Assets/Textures/Parts/facingun.png" id="2_bwwmd"]
+[ext_resource type="Script" path="res://ship_part.gd" id="3_8wx2l"]
+
+[node name="Gun" type="CharacterBody2D"]
+collision_layer = 2
+motion_mode = 1
+script = ExtResource("1_x3uup")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+rotation = 1.5708
+polygon = PackedVector2Array(7.00003, 7.99997, -6.99997, 8.00003, 0, -4)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("2_bwwmd")
+
+[node name="FirePosition" type="Marker2D" parent="."]
+position = Vector2(9, 0)
+rotation = 3.14159
+
+[node name="ShipPart" type="Node2D" parent="."]
+script = ExtResource("3_8wx2l")
+left = false
+up = false
+down = false

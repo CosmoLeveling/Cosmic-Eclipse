@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsm8u1wqprfdf"]
+
+[ext_resource type="FontFile" uid="uid://df8ul67ko7qb7" path="res://Assets/FreePixel.ttf" id="1_th3tv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8tqsw"]
+font = ExtResource("1_th3tv")
+font_size = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fetdf"]
+bg_color = Color(0.281485, 0, 0.00380908, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3pcxa"]
+bg_color = Color(0.122323, 0.591695, 1.92523e-07, 1)
+
+[node name="Gui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Box" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 461.0
+offset_bottom = 72.0
+
+[node name="Label" type="Label" parent="Box"]
+layout_mode = 2
+text = "Energy:"
+label_settings = SubResource("LabelSettings_8tqsw")
+
+[node name="Energy" type="Label" parent="Box"]
+layout_mode = 2
+text = "10/10"
+label_settings = SubResource("LabelSettings_8tqsw")
+
+[node name="Health" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -516.0
+offset_bottom = 54.0
+grow_horizontal = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_fetdf")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3pcxa")
+max_value = 10.0
+value = 10.0

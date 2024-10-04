@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://xyn17f31peb4"]
+
+[ext_resource type="Shader" path="res://Assets/BuildingTool.gdshader" id="1_qa321"]
+
+[resource]
+shader = ExtResource("1_qa321")
+shader_parameter/buildable = null

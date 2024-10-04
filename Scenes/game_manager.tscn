@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bs0d63v8nbrew"]
+
+[ext_resource type="Script" path="res://Scripts/Main_keys.gd" id="1_xbdgd"]
+
+[node name="GameManager" type="Node"]
+process_mode = 3
+script = ExtResource("1_xbdgd")

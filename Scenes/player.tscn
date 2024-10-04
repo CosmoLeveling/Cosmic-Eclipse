@@ -3,9 +3,9 @@
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_5i14y"]
 [ext_resource type="Script" path="res://Scripts/hitbox_component.gd" id="2_vyfwx"]
 [ext_resource type="Script" path="res://Scripts/HealthComponent.gd" id="3_gw1on"]
-[ext_resource type="PackedScene" uid="uid://bxiyku5ylxfok" path="res://Scenes/Spike.tscn" id="5_a5204"]
-[ext_resource type="PackedScene" uid="uid://c3a301rfh3nhb" path="res://Scenes/gun.tscn" id="6_ternx"]
-[ext_resource type="PackedScene" uid="uid://7w5wqrjvoan2" path="res://Scenes/Core.tscn" id="7_2jgww"]
+[ext_resource type="PackedScene" uid="uid://bxiyku5ylxfok" path="res://Scenes/Part/Spike.tscn" id="5_a5204"]
+[ext_resource type="PackedScene" uid="uid://c3a301rfh3nhb" path="res://Scenes/Part/gun.tscn" id="6_ternx"]
+[ext_resource type="PackedScene" uid="uid://7w5wqrjvoan2" path="res://Scenes/Part/Core.tscn" id="7_2jgww"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yt8jr"]
 size = Vector2(16, 16)

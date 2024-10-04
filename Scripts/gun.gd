@@ -4,13 +4,13 @@ extends CharacterBody2D
 var cooldown_ability_1 = 0
 @export var Player:player
 func _process(delta: float) -> void:
-	
-	if cooldown_ability_1 == 0:
-		if Input.is_action_pressed("shoot"):
-			if Player.current_energy > 0:
-				shoot()
-	else:
-		cooldown_ability_1 -= 1
+	if Player != null:
+		if cooldown_ability_1 == 0:
+			if Input.is_action_pressed("shoot"):
+				if Player.current_energy > 0:
+					shoot()
+		else:
+			cooldown_ability_1 -= 1
 
 func shoot():
 	Player.current_energy -= 1

@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxiyku5ylxfok"]
+
+[ext_resource type="Texture2D" uid="uid://dpmvj0k3ujxi8" path="res://Assets/Textures/Parts/Spike.png" id="1_xk1om"]
+[ext_resource type="Script" path="res://Scripts/area_2d.gd" id="2_jgagb"]
+[ext_resource type="Script" path="res://ship_part.gd" id="3_3uo7d"]
+
+[node name="Spike" type="CharacterBody2D"]
+collision_layer = 2
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_jgagb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(0, 7, 8, -8, -8, -8)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, 7, 7, -7, -7, -7)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xk1om")
+
+[node name="ShipPart" type="Node2D" parent="."]
+script = ExtResource("3_3uo7d")
+left = false
+up = false
+right = false
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
