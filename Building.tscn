@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cqiyowgqt2407"]
 
-[ext_resource type="Script" path="res://Scripts/building.gd" id="1_bdlkc"]
+[ext_resource type="Script" uid="uid://dlbdnd60xa2yt" path="res://Scripts/building.gd" id="1_bdlkc"]
 [ext_resource type="PackedScene" uid="uid://7w5wqrjvoan2" path="res://Scenes/Part/Core.tscn" id="2_wt5ah"]
 [ext_resource type="Material" uid="uid://xyn17f31peb4" path="res://Assets/BuildingTool.tres" id="3_oqvmc"]
 [ext_resource type="Texture2D" uid="uid://bdov2fiw6kheq" path="res://Assets/Textures/Parts/Core.png" id="4_8aaos"]

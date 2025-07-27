@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://bxiyku5ylxfok"]
 
 [ext_resource type="Texture2D" uid="uid://dpmvj0k3ujxi8" path="res://Assets/Textures/Parts/Spike.png" id="1_xk1om"]
-[ext_resource type="Script" path="res://Scripts/area_2d.gd" id="2_jgagb"]
-[ext_resource type="Script" path="res://ship_part.gd" id="3_3uo7d"]
+[ext_resource type="Script" uid="uid://diefbked8uawq" path="res://Scripts/area_2d.gd" id="2_jgagb"]
+[ext_resource type="Script" uid="uid://tgeqwwam861c" path="res://ship_part.gd" id="3_3uo7d"]
 
 [node name="Spike" type="CharacterBody2D"]
 collision_layer = 2

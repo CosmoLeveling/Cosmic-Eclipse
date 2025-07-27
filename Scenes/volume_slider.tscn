@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://btej07ikgy7g"]
 
-[ext_resource type="Script" path="res://Scripts/volume_slider.gd" id="1_y886n"]
+[ext_resource type="Script" uid="uid://l5p4v5sd8ngv" path="res://Scripts/volume_slider.gd" id="1_y886n"]
 
 [node name="VolumeSlider" type="HSlider"]
 offset_right = 8.0

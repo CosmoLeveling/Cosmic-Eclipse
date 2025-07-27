@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://7w5wqrjvoan2"]
 
-[ext_resource type="Script" path="res://Scripts/character_body_2d.gd" id="1_5ht02"]
+[ext_resource type="Script" uid="uid://bphhu6tdlocih" path="res://Scripts/character_body_2d.gd" id="1_5ht02"]
 [ext_resource type="Texture2D" uid="uid://bdov2fiw6kheq" path="res://Assets/Textures/Parts/Core.png" id="2_ishfv"]
-[ext_resource type="Script" path="res://ship_part.gd" id="3_p8oky"]
+[ext_resource type="Script" uid="uid://tgeqwwam861c" path="res://ship_part.gd" id="3_p8oky"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_urka0"]
 size = Vector2(16, 16)
